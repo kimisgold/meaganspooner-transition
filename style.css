@@ -1,0 +1,840 @@
+/*
+Theme Name: Transition
+Author: Kim Nguyen
+*/
+
+@font-face {
+    font-family: 'AbrahamLincolnRegular';
+    src: url('font/abrahamlincoln-webfont.eot');
+    src: url('font/abrahamlincoln-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/abrahamlincoln-webfont.woff') format('woff'),
+         url('font/abrahamlincoln-webfont.ttf') format('truetype'),
+         url('font/abrahamlincoln-webfont.svg#AbrahamLincolnRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'IcoMoon';
+	src: url('font/IcoMoon.eot');
+	src: url('font/IcoMoon.eot?#iefix') format('embedded-opentype'),
+		url('font/IcoMoon.svg#IcoMoon') format('svg'),
+		url('font/IcoMoon.woff') format('woff'),
+		url('font/IcoMoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    height: 100%;
+    overflow: auto;	
+    background-image: url('img/bg.jpg');
+    box-shadow: inset 0px 0px 70px rgba(0,0,0,.5);
+        -webkit-box-shadow: inset 0px 0px 70px rgba(0,0,0,.5);
+        -moz-box-shadow: inset 0px 0px 70px rgba(0,0,0,.5);
+        -o-box-shadow: inset 0px 0px 70px rgba(0,0,0,.5);
+    font-family: "PT Serif", serif;
+    font-size: 14px;
+    color: #A8A2BB;
+    padding: 0;
+    margin: 0;
+    display: block;
+    }
+
+body.maintenance {
+    box-shadow: 0px 0px 0px black;
+        -webkit-box-shadow: 0px 0px 0px black;
+        -moz-box-shadow: 0px 0px 0px black;
+        -o-box-shadow: 0px 0px 0px black;
+    text-align: center;
+    padding: 5%;
+}
+
+:focus {
+    background-color: #47436b;
+    outline: none;
+}
+
+a { text-decoration: none; }
+a:link { color: #6495C9; }
+a:visited { color: #3C6796; }
+a:hover, a:active { color: #9DEDF8; }
+
+p, li {
+    font-size: 16px;
+    line-height: 1.875em;
+    }
+    
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 { font-weight: normal; }
+
+h1 {
+    font-size: 30px;
+    line-height: 1.5em;
+    margin: 1em 0 0 0;
+    }
+    
+h2 {
+    font-size: 24px;
+    line-height: 1.5em;
+    margin: 0;
+    }
+    
+h3 {
+    font-size: 21px;
+    line-height: 1.5em;
+    margin: 0;
+}
+    
+hr {
+    margin: 40px 0;
+    height: 1px;
+    border: 0;
+    background-color: 
+    rgba(255, 255, 255, .1);
+}
+
+.button {
+    display: inline-block;
+    background: #ececec;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 1px;
+    border-color: #8e8e8e;
+    border-width: 1px;
+    border-style: solid;
+    color: #000000;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 100;
+    width: 130px;
+    text-align: center;
+}
+
+    .button:link { color: #333; }
+    .button:visited { color: #363636; }
+    .button:hover { color: #3C6796; }
+    
+    .indiebound { 
+        background-image: url('img/indiebound.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(50%,#ececec), color-stop(100%,#ececec)); 
+        background-image: url('img/indiebound.png'), -moz-linear-gradient(center top, #ffffff 0%, #f3f3f3 50%, #ececec 50%, #ececec 100%);
+    }
+
+    .amazon { 
+        background-image: url('img/amazon.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(50%,#ececec), color-stop(100%,#ececec)); 
+        background-image: url('img/amazon.png'), -moz-linear-gradient(center top, #ffffff 0%, #f3f3f3 50%, #ececec 50%, #ececec 100%);
+    }
+    
+    .barnesandnoble { 
+        background-image: url('img/bn.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(50%,#ececec), color-stop(100%,#ececec)); 
+        background-image: url('img/bn.png'), -moz-linear-gradient(center top, #ffffff 0%, #f3f3f3 50%, #ececec 50%, #ececec 100%);
+    }
+    
+    .bookdepository { 
+        background-image: url('img/depository.png'), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(50%,#ececec), color-stop(100%,#ececec)); 
+        background-image: url('img/depository.png'), -moz-linear-gradient(center top, #ffffff 0%, #f3f3f3 50%, #ececec 50%, #ececec 100%);
+    }
+
+.alignleft {
+    float: left;
+    margin: 0 20px 0 0;
+    }
+
+.alignright {
+    float: right;
+    margin: 0 0 0 20px;
+    }
+    
+header {
+    width: 100%;
+    min-height: 50px;
+    background: url('img/top-pattern.png') repeat-x;
+    }
+    
+.wrap {
+    margin: 0 auto;
+    padding: 0;
+    }
+    
+.site-title {
+    background: url('img/header.png') no-repeat top center;
+    background-size: contain;
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+    display: block;
+    font-family: "AbrahamLincolnRegular";
+    font-size: 60px;
+    margin: 0 auto;
+    padding: 9% 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    
+.site-title a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+        -webkit-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+        -moz-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+        -o-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+    }
+    
+    .site-title a:link, .site-title a:visited {
+        color: #dcd3fe;
+        text-shadow: 0 0 20px rgba(0,48,255,.35);        
+        }
+    
+    .site-title a:hover {
+        color: #fff;
+        text-shadow: 0 0 30px rgba(156,0,255,1);
+        }
+        
+.skylark-banner {
+    background-color: #190E36;
+    text-align: center;
+}
+
+.skylark-banner p {
+    font-size: 14px;
+    margin: 0;
+    padding: .5em 0;
+}
+    
+header nav {
+    width: 100%;
+    border: solid #47436b;
+    border-width: 1px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    }
+    
+    header nav .table {
+        display: table;
+        margin: auto;
+    }
+    
+    header nav li {
+        font-family: "AbrahamLincolnRegular";
+        font-size: 24px;
+        line-height: 1em;
+        padding: 0;
+        position: relative;
+        margin: 0;
+        }
+    
+    header nav a { 
+        text-decoration: none; 
+        transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+            -webkit-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+            -moz-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+            -o-transition: text-shadow .25s ease-in-out, color .25s ease-in-out;
+        }
+        
+    header nav a:link, header nav a:visited { color: #b3b3b3; text-shadow: 0px 0px 1px #7a7a7a }
+    header nav a:active, header nav a:hover { color: #ffffff; text-shadow: 0px 0px 15px #1436cc}
+    header nav .current-menu-item a:link, header nav .current-menu-item a:visited { color: #ffffff; }
+    
+        
+    header nav ul {
+        float: left;
+        list-style-type: none;
+        margin: 0 auto; 
+        padding: 0;
+        text-align: center;
+        }
+        
+    header nav li {
+        border-left: 1px solid #47436b;
+        float: left;
+        }
+        
+        header nav li:last-child {
+            border-right: 1px solid #47436b;
+            }
+            
+    header nav li a {
+        display: block;
+        padding: 20px 15px;        
+    }
+            
+    header nav .sub-menu {
+        background-image: url('img/bg.jpg');        
+        border: solid #47436b;
+        border-width: 1px 1px 0 1px;
+        display: none;
+        position: absolute;
+            top: 64px;
+            left: -1px;
+        margin: 0;
+        padding: 0;
+        z-index: 9999;
+    }
+    
+        header nav .sub-menu li {
+            border: solid #47436b;
+            border-width: 0 0 1px 0;
+            right: auto;
+        }
+        
+            header nav .sub-menu li a {
+                width: 150px;
+                display: block;
+                padding: 20px 15px;
+                text-align: left;
+            }
+            
+            header nav .sub-menu li a:before {
+                content: "";
+                display: inline-block;
+                height:12px;
+                width: 23px;
+                margin: 0 10px 0 0;
+                background-image: url('img/bullet.png');
+            }
+    
+    header nav li:hover > .sub-menu {
+        display: block;
+    }
+
+footer {
+    clear: both;
+    padding: 0 0 40px 0;
+    text-align: center;
+    }
+
+
+/* ------------------------------ 
+    Form Elements
+______________________________ */
+
+input[type=text], textarea {
+    width: 100%;
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px dotted #47436b;
+    font-family: "Bad Script", sans-serif;
+    font-size: 21px;
+    color: #A8A2BB;
+    padding: 0;
+}
+
+textarea {
+    background-image: url('img/form-bg.png');    
+    border: 0;
+}
+
+input[type=text]:focus, textarea:focus {
+    background-color: transparent;
+}
+
+input[type=submit], button {
+    background: rgba(0, 0, 0, .3);
+    border: 0;
+    border-radius: 5px;
+    color: rgba(236, 202, 255, .6);
+    cursor: pointer;
+    font-family: "AbrahamLincolnRegular", serif;
+    margin: 10px 0;
+    padding: 5px 20px;
+    text-transform: uppercase;
+}
+
+.wpcf7 {
+    text-align: center;
+}
+
+.wpcf7 input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.page form {
+    display: inline-block;
+    margin: auto;
+    text-align: left;  
+}
+
+
+
+/* ------------------------------ 
+    Home
+______________________________ */
+
+.page-template-frontpage-php .bio {
+    margin: 0 0 40px 0;
+    padding: 0 0 20px 0;
+}
+
+.page-template-frontpage-php .sidebar {
+    padding: 0;
+}
+
+.page-template-frontpage-php h3, .page-template-frontpage-php .sidebar h3 {
+    font-family: "AbrahamLincolnRegular";
+    font-size: 30px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #57bef5;
+}
+
+.page-template-frontpage-php aside ul {
+    list-style-type: none;
+    padding: 0;
+    }
+
+.page-template-frontpage-php aside li {
+    padding: 10px 0;    
+    }
+    
+    .page-template-frontpage-php aside li { border-bottom: 1px solid #47436b; }
+
+
+.page-template-frontpage-php.page .content {
+    padding: 0;
+    }
+
+.page-template-frontpage-php.page .content .slide-content {
+    width: 50%;
+    box-sizing: border-box;
+    	-webkit-box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    float: right;
+    margin: 0 0 0 47%;
+    padding: 5% 2%;
+    }
+    
+.page-template-frontpage-php.page .featured a:link, .page-template-frontpage-php.page .featured a:visited {
+    color: #b7b7b7;
+    }
+    
+
+.page-template-frontpage-php.page .content h2 {
+    text-transform: uppercase;
+    }
+
+.page-template-frontpage-php .news.sidebar .date {
+    color: #7f7986;
+    text-transform: uppercase;
+    }
+    
+.page-template-frontpage-php .news.sidebar:last-child { margin-bottom: 20px; }
+    
+.page-template-frontpage-php .news.sidebar ul {
+    margin: 1em 0;
+    }
+    
+    .page-template-frontpage-php .news.sidebar li {
+        margin: 1em 0;
+        padding: 0 0 1em 0;
+        }
+    
+.page-template-frontpage-php .news.sidebar p, .page-template-frontpage-php .news.sidebar li {
+    font-size: 14px;
+    line-height: 1.7143em;        
+    }
+    
+.page-template-frontpage-php .news.sidebar .linkwithin_hook {
+    display: none;
+    }
+
+.page-template-frontpage-php .widget_twitter {
+    font-size: 20px;
+    line-height: 30px;
+    position: relative;
+    }
+
+    .page-template-frontpage-php .widget_twitter:before {
+        content: "\201C";
+        font-size: 100px;
+        color: rgba(0,0,0,.2);
+        position: absolute;
+        top: 90px;
+        left: -20px;
+        z-index: -5;
+        }
+    
+    .page-template-frontpage-php .widget_twitter ul {
+        margin: 10px 0;
+    }
+    
+    .page-template-frontpage-php .widget_twitter .entry-meta {
+        display: block;
+        font-size: 14px;
+    }
+
+            
+/* ------------------------------ 
+    Blog
+______________________________ */
+
+.bio {
+    border-bottom: 1px solid #47436b;
+    overflow: auto;
+    padding: 20px 10px;    
+    }
+
+.bio p {
+    font-size: 14px;
+    line-height: 1.7143em;
+    }
+    
+.bio .avatar {
+    float: left;
+    padding: 0 20px 0 0;
+    }
+    
+.blog .posts, .archive .posts,
+.search .posts {
+    float: none;
+    display: inline-block;
+}
+    
+.blog .date, .archive .date, 
+.search .date, .tag .date {
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+    }
+
+.blog .post {
+    margin: 0 0 100px 0;
+    }
+    
+.content {
+    border-bottom: 1px solid #47436b;
+    margin: 0;
+    overflow: auto;
+    }
+    
+.content p {
+    margin: 2em 0;
+}
+
+.posts nav {
+    border-top: 1px solid rgba(255,255,255,.04);
+}
+
+.older { float: left; }    
+.newer { float: right; }    
+    
+
+/* ------------------------------ 
+    Single
+______________________________ */
+
+.single article {
+    font-size: 16px;
+    line-height: 1.875em;
+    overflow: auto;
+}
+
+.single .content {
+    padding: 40px 0;
+}
+
+.single .content h1 {
+    text-align: center;
+    margin: 0
+}
+
+.single .date {
+    margin: 0 0 60px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.single .commentlist {
+    margin: 0;
+}
+
+.single .commentlist li:last-child .comment-body {
+    border-bottom: 0;
+    padding: 0;
+}
+
+.single #comments {
+    clear: both;
+    border-top: 1px solid #47436b;
+    padding: 20px 0 0 0;
+}
+
+.single #comments-form input[type=submit] {
+    width: 100%;
+    margin: 40px 0;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.single .comments-header {
+    clear: both;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+.single .comments ol, .single .comments ul {
+    list-style-type: none;
+}
+
+.single .comments ol {
+    padding: 0;
+}
+
+.single .comment {
+    margin: 40px 0;
+}
+
+.single .comment-meta {
+    font-size: 16px;
+    }
+    
+.single .comment-body {
+    border-bottom: 1px solid rgba(255,255,255,.05);
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    }
+        
+    .single .comment-body p {
+        font-size: 14px;
+        line-height: 1.7143em;
+        clear: both;
+        }
+
+.single .comment-author img {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #47436b;        
+}
+
+.single .post nav {
+    border-top: 1px solid #47436b;
+    clear: both;
+    margin: 40px 0 0 0;
+}
+
+.single .post nav p {
+    font-style: italic;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.single .post nav .label {
+    font-size: 12px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.single #trackbacks {
+    border-top: 1px solid #47436b;
+    border-bottom: 1px solid #47436b;
+    clear: both;
+    margin: 0 0 30px 0;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    .single #trackbacks p {
+        margin: 0;
+        }
+
+
+/* ------------------------------ 
+    Page
+______________________________ */
+
+.page .content {
+    padding: 40px 0;
+}
+
+.page .content h1 {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.page .content h2 {
+    font-family: "AbrahamLincolnRegular";
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #57bef5;
+}
+
+/* ------------------------------ 
+    Events
+______________________________ */
+
+#em-wrapper .em-events-search-form input[type="text"] {
+    width: auto;
+}
+
+#em-wrapper .em-events-search-form select {
+    font-size: 16px;
+    margin: 20px 0 0 0;
+}
+
+#em-wrapper .em-events-search-form input[type="submit"] {
+    font-size: 16px;
+    float: right;
+    margin: 15px 0 0 0;
+}
+
+#em-wrapper .events-table {
+    width: 100%;
+    border-top: 1px solid #47436b;
+    margin: 20px 0 0 0;
+}
+
+#em-wrapper .events-table img {
+	max-width: 80%;
+}
+
+#em-wrapper .events-table th {
+    border-bottom: 1px solid #47436b;
+    font-size: 21px;
+    line-height: 1.5em;
+}
+
+#em-wrapper .event-time {
+    width: 20%;
+}
+
+#em-wrapper .event-image {
+    width: 20%;
+}
+
+#em-wrapper .event-description {
+    width: 60%;
+}
+
+#em-wrapper th, #em-wrapper td {
+    box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+    font-size: 16px;
+    padding: 20px 20px 20px 0;
+    text-align: left;
+}
+
+.event-map {
+    float: right;
+    margin: 40px 0;
+}
+    
+/* ------------------------------ 
+    Sidebar
+______________________________ */
+
+.sidebar {
+    padding: 20px 0;
+    }
+
+.sidebar h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    }
+    
+.sidebar p {
+    font-size: 14px;
+    line-height: 2em;
+    margin: 0;
+    }
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    }
+
+.sidebar li {
+    padding: 10px 0;    
+    font-size: 14px;
+    line-height: 2em;
+    margin: 0;    
+    }
+    
+    .sidebar li:not(:last-child) { border-bottom: 1px solid #47436b; }
+
+.sidebar #searchform {
+    margin: 0 0 20px 0;
+}
+
+    
+.sidebar .rss a:before {
+	content: "\0023";    
+	font-family: "IcoMoon";
+	line-height: 2.5;
+	font-size: 16px;
+	margin-right: 10px;
+	padding: 0;
+}
+
+.sidebar #searchbar:before {
+	content: "\0021";    
+	font-family: "IcoMoon";
+	line-height: 2.5;
+	font-size: 16px;
+	float: right;
+	padding: 0;
+}
+
+.sidebar .twitter a:before {
+	content: "\0022";    
+	font-family: "IcoMoon";
+	line-height: 2.5;
+	font-size: 16px;
+	margin-right: 10px;
+	padding: 0;
+}
+
+.sidebar .widget_most_popular_tags {
+    line-height: 2em;
+    margin: 30px 0;
+}
+
+
+/* ------------------------------ 
+    Special Forms
+______________________________ */
+
+
+	/* ------------------------------ 
+	    Birthday Contest - July 5, 2012
+	______________________________ */
+	
+	#wpcf7-f1089-p1091-o1, #wpcf7-f1089-p1098-o1 {
+		text-align: left;
+	}
+	
+	#wpcf7-f1089-p1091-o1:after, #wpcf7-f1089-p1098-o1:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	
+	#wpcf7-f1089-p1091-o1 span, #wpcf7-f1089-p1098-o1 span {
+		margin: 0;
+	}
+	
+	#wpcf7-f1089-p1091-o1 .line2 span, #wpcf7-f1089-p1098-o1 .line2 span {
+		display: inline-block;
+	}
+	

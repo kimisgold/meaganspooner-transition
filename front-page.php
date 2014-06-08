@@ -30,11 +30,13 @@ Template Name: Front Page
             
             <h3>About the Author</h3>
             
-            <p><?php the_author_meta('description', 1); ?></p>
+            <p><?php the_author_meta('description', 5); ?></p>
+            
+            <p class="contact"><a href="http://eepurl.com/wGz6D" class="button">Sign up for her newsletter for contests and sneak peeks!</a></p>
                 
         </aside>
         
-        <aside class="sidebar">
+        <aside class="recent-posts sidebar">
         
             <?php if(function_exists(dynamic_sidebar('Home Sidebar'))): ?>
         
@@ -54,16 +56,16 @@ Template Name: Front Page
             <?php
             
             // The Query
-            query_posts( array ( 'category_name' => 'News', 'posts_per_page' => 2 ) );
+            query_posts( array ( 'category_name' => 'News', 'posts_per_page' => 3 ) );
             
             // The Loop
             while ( have_posts() ) : the_post();
-            	echo '<li>';
-            	echo '<span class="date">';
-            	the_date();
-            	echo '</span>';
-            	the_content();
-            	echo '</li>';
+                echo '<li>';
+                echo '<span class="date">';
+                the_date();
+                echo '</span>';
+                the_content();
+                echo '</li>';
             endwhile;
             
             // Reset Query

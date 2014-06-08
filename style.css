@@ -843,31 +843,109 @@ ______________________________ */
     margin: 30px 0;
 }
 
+.subnav {
+    text-align: center;
+    padding-bottom: .4375em;
+    border-bottom: 1px solid #47436b;
+    margin-top: -24px;
+    margin-bottom: 24px;
+}
+
+.subnav a {
+    color: #fff;
+}
+
+.subnav h3 {
+    font-family: "AbrahamLincolnRegular";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-right: 1em;
+    line-height: 120px;
+}
+
+.subnav ul {
+    display: inline-block;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    vertical-align: top;
+}
+
+.subnav li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.subnav img {
+    height: 120px;
+    width: auto;
+}
+
+.subnav a {
+    opacity: .65;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+
+.subnav a:hover {
+    opacity: 1;
+}
+
+.active {
+    opacity: 1 !important;
+}
+
+.subnav li a {
+    display: table;
+    width: 100px;
+    height: 120px;
+    text-align: left;
+}
+
+.no-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.book-title {
+    display: table-cell;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "AbrahamLincolnRegular";
+    text-shadow: -1px -1px 0 #000,       1px -1px 0 #000,     -1px 1px 0 #000,      1px 1px 0 #000, 0 0 10px #000;
+    vertical-align: middle;
+    line-height: 18px;
+}
 
 /* ------------------------------ 
     Special Forms
 ______________________________ */
 
 
-	/* ------------------------------ 
-	    Birthday Contest - July 5, 2012
-	______________________________ */
-	
-	#wpcf7-f1089-p1091-o1, #wpcf7-f1089-p1098-o1 {
-		text-align: left;
-	}
-	
-	#wpcf7-f1089-p1091-o1:after, #wpcf7-f1089-p1098-o1:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	
-	#wpcf7-f1089-p1091-o1 span, #wpcf7-f1089-p1098-o1 span {
-		margin: 0;
-	}
-	
-	#wpcf7-f1089-p1091-o1 .line2 span, #wpcf7-f1089-p1098-o1 .line2 span {
-		display: inline-block;
-	}
-	
+    /* ------------------------------ 
+        Birthday Contest - July 5, 2012
+    ______________________________ */
+    
+    #wpcf7-f1089-p1091-o1, #wpcf7-f1089-p1098-o1 {
+        text-align: left;
+    }
+    
+    #wpcf7-f1089-p1091-o1:after, #wpcf7-f1089-p1098-o1:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    #wpcf7-f1089-p1091-o1 span, #wpcf7-f1089-p1098-o1 span {
+        margin: 0;
+    }
+    
+    #wpcf7-f1089-p1091-o1 .line2 span, #wpcf7-f1089-p1098-o1 .line2 span {
+        display: inline-block;
+    }
+    

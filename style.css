@@ -15,14 +15,14 @@ Author: Kim Nguyen
 }
 
 @font-face {
-	font-family: 'IcoMoon';
-	src: url('font/IcoMoon.eot');
-	src: url('font/IcoMoon.eot?#iefix') format('embedded-opentype'),
-		url('font/IcoMoon.svg#IcoMoon') format('svg'),
-		url('font/IcoMoon.woff') format('woff'),
-		url('font/IcoMoon.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src: url('font/icomoon.eot');
+    src: url('font/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('font/icomoon.svg#icomoon') format('svg'),
+        url('font/icomoon.woff') format('woff'),
+        url('font/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -32,7 +32,7 @@ html {
 
 body {
     height: 100%;
-    overflow: auto;	
+    overflow: auto;    
     background-image: url('img/bg.jpg');
     box-shadow: inset 0px 0px 70px rgba(0,0,0,.5);
         -webkit-box-shadow: inset 0px 0px 70px rgba(0,0,0,.5);
@@ -376,6 +376,8 @@ input[type=submit], button {
     Home
 ______________________________ */
 
+.orbit-wrapper .content { overflow: hidden; }
+
 .page-template-frontpage-php .bio {
     margin: 0 0 40px 0;
     padding: 0 0 20px 0;
@@ -412,8 +414,8 @@ ______________________________ */
 .page-template-frontpage-php.page .content .slide-content {
     width: 50%;
     box-sizing: border-box;
-    	-webkit-box-sizing: border-box;
-    	-moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
     float: right;
     margin: 0 0 0 47%;
     padding: 5% 2%;
@@ -428,12 +430,16 @@ ______________________________ */
     text-transform: uppercase;
     }
 
+.page-template-frontpage-php .news.sidebar, .page-template-frontpage-php .widget_twitter {
+    padding-bottom: 2em;
+}
+
 .page-template-frontpage-php .news.sidebar .date {
     color: #7f7986;
     text-transform: uppercase;
     }
     
-.page-template-frontpage-php .news.sidebar:last-child { margin-bottom: 20px; }
+.page-template-frontpage-php .news.sidebar:last-child { margin-bottom: 2em; }
     
 .page-template-frontpage-php .news.sidebar ul {
     margin: 1em 0;
@@ -453,6 +459,10 @@ ______________________________ */
     display: none;
     }
 
+.page-template-frontpage-php .recent-posts.sidebar li:last-child {
+    border-bottom: 0;
+}
+
 .page-template-frontpage-php .widget_twitter {
     font-size: 20px;
     line-height: 30px;
@@ -460,7 +470,8 @@ ______________________________ */
     }
 
     .page-template-frontpage-php .widget_twitter:before {
-        content: "\201C";
+        font-family: "icomoon";
+        content: "\0029";
         font-size: 100px;
         color: rgba(0,0,0,.2);
         position: absolute;
@@ -477,6 +488,28 @@ ______________________________ */
         display: block;
         font-size: 14px;
     }
+    
+.page-template-frontpage-php .contact p {
+    display: inline-block;
+    margin: 0;
+    line-height: 36px;
+    vertical-align: top;
+}
+
+.page-template-frontpage-php .contact {
+    clear: both;
+    overflow: auto;
+}
+.page-template-frontpage-php .contact .button {
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,.3);
+    color: rgba(236, 202, 255, .6);
+    border: 0;
+}
 
             
 /* ------------------------------ 
@@ -703,7 +736,7 @@ ______________________________ */
 }
 
 #em-wrapper .events-table img {
-	max-width: 80%;
+    max-width: 80%;
 }
 
 #em-wrapper .events-table th {
@@ -779,30 +812,30 @@ ______________________________ */
 
     
 .sidebar .rss a:before {
-	content: "\0023";    
-	font-family: "IcoMoon";
-	line-height: 2.5;
-	font-size: 16px;
-	margin-right: 10px;
-	padding: 0;
+    content: "\0028";    
+    font-family: "IcoMoon";
+    line-height: 2.5;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 0;
 }
 
 .sidebar #searchbar:before {
-	content: "\0021";    
-	font-family: "IcoMoon";
-	line-height: 2.5;
-	font-size: 16px;
-	float: right;
-	padding: 0;
+    content: "\0027";    
+    font-family: "IcoMoon";
+    line-height: 2.5;
+    font-size: 16px;
+    float: right;
+    padding: 0;
 }
 
 .sidebar .twitter a:before {
-	content: "\0022";    
-	font-family: "IcoMoon";
-	line-height: 2.5;
-	font-size: 16px;
-	margin-right: 10px;
-	padding: 0;
+    content: "\0029";    
+    font-family: "IcoMoon";
+    line-height: 2.5;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 0;
 }
 
 .sidebar .widget_most_popular_tags {

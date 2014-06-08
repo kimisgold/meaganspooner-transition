@@ -10,17 +10,17 @@ $total_results = $wp_query->found_posts;
     <aside class="bio">
         
         <h2>
-        	<?php
-        		if ( is_day() ) :
-        			printf( __( 'Daily Archives: %s', 'simplex' ), '<span>' . get_the_date() . '</span> (' . $total_results . ' entries)' );
-        		elseif ( is_month() ) :
-        			printf( __( 'Monthly Archives: %s', 'simplex' ), '<span>' . get_the_date( 'F Y' ) . '</span> (' . $total_results . ' entries)' );
-        		elseif ( is_year() ) :
-        			printf( __( 'Yearly Archives: %s', 'simplex' ), '<span>' . get_the_date( 'Y' ) . '</span> (' . $total_results . ' entries)' );
-        		else :
-        			_e( 'Archives', 'simplex' );
-        		endif;
-        	?>            
+            <?php
+                if ( is_day() ) :
+                    printf( __( 'Daily Archives: %s', 'simplex' ), '<span>' . get_the_date() . '</span> (' . $total_results . ' entries)' );
+                elseif ( is_month() ) :
+                    printf( __( 'Monthly Archives: %s', 'simplex' ), '<span>' . get_the_date( 'F Y' ) . '</span> (' . $total_results . ' entries)' );
+                elseif ( is_year() ) :
+                    printf( __( 'Yearly Archives: %s', 'simplex' ), '<span>' . get_the_date( 'Y' ) . '</span> (' . $total_results . ' entries)' );
+                else :
+                    _e( 'Archives', 'simplex' );
+                endif;
+            ?>            
         </h2>
         
     </aside>

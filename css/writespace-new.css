@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'Otama-ep';
+    src: url('otama-ep.eot');
+    src: url('otama-ep.eot?#iefix') format('embedded-opentype'),
+             url('otama-ep.woff') format('woff'),
+             url('otama-ep.ttf') format('truetype'),
+             url('otama-ep.svg#otama-ep') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../font/icomoon.eot');
+	src: url('../font/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../font/icomoon.svg#icomoon') format('svg'),
+		url('../font/icomoon.woff') format('woff'),
+		url('../font/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+    background-color: #fffced;
+    font-family: "PT Serif", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol { color: #3b3762; }
+
+h1 { 
+    font-family: "Otama-ep", serif; 
+    font-size: 40px;
+    line-height: 1em;
+    font-weight: normal;
+    text-align: center; 
+}
+
+h3 {
+    margin-top: 0;
+}
+
+a { text-decoration: none; }
+a:link { color: #B03CDD; }
+a:visited { color: #C492CA; }
+a:hover, a:active { color: #D100EE; }
+
+p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+img {
+    height: auto;
+}
+
+hr:empty {
+    margin: 20px 0;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    background-color: #3b3762;
+    display: inline-block;
+}
+
+:empty {
+    margin: 0;
+}
+
+.alignleft { 
+    float: left; 
+    margin-right: 20px;
+}
+
+.alignright { 
+    float: right; 
+    margin-left: 20px;
+}
+
+.skylark-banner {
+    background-color: #000;
+    color: #A8A2BB;
+    text-align: center;
+}
+
+.skylark-banner p {
+    color: #A8A2BB;
+    font-size: 14px;
+    margin: 0;
+    padding: .5em 0;
+}
+
+.post { border-bottom: 1px solid #3b3762; }
+
+.post-template-writespace-php img.alignnone:first-child,
+.author-photo {
+    width: 150px;
+    height: auto;
+    border: 1px solid #fdfcf4;
+    display: block;
+    margin: -10% auto 5% auto;
+}
+
+.content img { max-width: 100%; }
+
+.spotlight { 
+    width: 100%;
+    background-color: #000; 
+    position: relative;
+    text-align: center;
+}
+
+.spotlight img {
+    vertical-align: bottom;
+}
+
+.spotlight h1 {
+    width: 60%;
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    color: #fff;
+    text-shadow: 0 0 35px rgba(143,80,0,1);
+}
+
+.spotlight .name {
+    text-align: center;
+    font-size: 64px;
+    float: none;
+    line-height: 70px;
+    text-transform: uppercase;
+}
+
+#email-subscribe {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #3b3762;
+    clear: both;
+}
+
+#email-subscribe p { margin: 0; }
+
+@media screen and (max-width: 768px) {
+  .spotlight h1 { 
+      width: 100%;
+      left: 0;
+      font-size: 18px; 
+  }
+  .spotlight .name { font-size: 24px; }
+}
+
+.intro {
+    border-bottom: 1px solid #3B3762;
+    margin-bottom: 50px;
+}
+
+    .intro:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background-color: #3B3762;
+        margin-top: 50px;
+    }
+
+    .intro .social { 
+        text-align: center; 
+        margin-top: 50px;
+    }
+
+.social a:before {
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+
+    .social a { 
+        display: inline-block; 
+        margin: 0 10px 0 0;
+    }
+
+    .twitter:before { background-image: url('../img/social/twitter-16x16.png'); }
+    .website:before { background-image: url('../img/social/website-16x16.png'); }
+    .pinterest:before { background-image: url('../img/social/pinterest-16x16.png'); }
+    .facebook:before { background-image: url('../img/social/facebook-16x16.png'); }
+    .goodreads:before { background-image: url('../img/social/goodreads-16x16.png'); }
+
+.name {
+    float: left;
+    font-family: "Otama-ep", serif; 
+    font-size: 48px;
+    line-height: 36px;
+    margin: 10px 10px 0 0;
+}
+
+.meg { 
+    border-bottom: 3px solid #3B3762;
+    margin-bottom: 50px;
+    text-align: center; 
+}
+
+    .meg:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #3B3762;
+        margin-top: 50px;
+    }
+
+.meg h2 {
+    font-family: "Nothing You Could Do", cursive;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.tour {
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .25);
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .25);
+        -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .25);
+        -o-box-shadow: 0 0 20px rgba(0, 0, 0, .25);
+}
+
+.tour h2 {
+    font-family: "Otama-ep", serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: #3B3762;
+    display: inline-block;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    line-height: 1em;
+    margin: 40px 0 70px 0;
+}
+
+    .tour h2:before {
+        content: "";
+        display: block;
+        margin-bottom: 25%;
+    }
+    
+.tour img.alignnone {
+    clear: both;
+    display: block;
+    width: 100% !important;
+}
+
+    .tour img.alignleft { margin-right: 20px; }
+    .tour img.alignright { margin-left: 20px; }
+
+.stop {
+    overflow: hidden;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+}
+
+    .stop a.vertical {
+        width: 50%;
+        overflow: hidden;
+        display: inline-block;
+        float: left;
+    }
+        
+    .stop img {
+        width: 100%;
+        vertical-align: bottom;
+        margin: 0 !important;
+        border: 0 !important;
+    }
+    
+    .stop img.wp-smiley {
+        width: 15px !important;
+    }
+
+    .stop p:first-child { padding: 0; }
+    
+    .stop p:empty { padding: 0; }
+
+    .stop h3, .stop p { 
+        background-color: #000; 
+        color: #C4A4C9;
+    }
+
+    .stop h3 {
+        padding: 20px 20px 0 20px;
+        display: inline-block;
+        width: 100%;
+        font-family: "Otama-ep";
+        font-size: 24px;
+        margin: 0;
+        box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+    }
+
+    .stop p {
+        margin: 0;
+        padding: 20px;
+    }
+
+.stop:last-child {
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.book h3 {
+    border-top: 1px solid #3B3762;
+    border-bottom: 1px solid #3B3762;
+    padding: 3px 0;
+    text-align: center;
+    margin: 20px 0 40px 0;
+    font-family: "Otama-ep", serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+    .book h3:before, .book h3:after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: #3B3762;
+    }
+    
+    .book h3:before { margin-bottom: 20px; }
+    .book h3:after { margin-top: 20px; }
+    
+    .book .cover { 
+        max-width: 200px;
+        float: left;
+        margin: 0 20px 20px 0;
+    }
+
+.title {
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.about { 
+    border-top: 1px solid #3B3762; 
+    margin-top: 40px; 
+    padding: 40px 0; 
+}
+
+    .about p {
+        font-size: 12px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 1.25em;
+        text-align: center;
+    }
+    
+        .about p:first-child { margin-top: 0; }
+
+.nrelate { display: none; }
+
+footer { text-align: center; }
+
+    footer p { padding: 0 0 40px 0; }
+    
+.single .commentlist {
+    margin: 0;
+}
+
+.single .commentlist li:last-child .comment-body {
+    border-bottom: 0;
+    padding: 0;
+}
+
+.single #comments {
+    clear: both;
+    padding: 20px 0 0 0;
+}
+
+.single #comments-form input[type=submit] {
+    width: 100%;
+    margin: 40px 0;
+    padding: 10px;
+    font-size: 24px;
+    line-height: 100%;
+}
+
+.single .comments-header {
+    clear: both;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+.single .comments ol, .single .comments ul {
+    list-style-type: none;
+}
+
+.single .comments ol {
+    padding: 0;
+}
+
+.single .comment {
+    margin: 40px 0;
+}
+
+.single .comment-meta {
+    font-size: 16px;
+    }
+    
+.single .comment-body {
+    border-bottom: 1px dotted #3b3762;
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    }
+        
+    .single .comment-body p {
+        font-size: 14px;
+        line-height: 1.7143em;
+        clear: both;
+        }
+
+.single .comment-author img {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 3px rgba(0,0,0,.3);
+        -moz-box-shadow: 0 0 3px rgba(0,0,0,.3);
+        -o-box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+.single #trackbacks {
+    border-top: 1px solid #3b3762;
+    border-bottom: 1px solid #3b3762;
+    clear: both;
+    margin: 0 0 30px 0;
+    padding: 20px;
+    text-align: center;
+    }
+    
+    .single #trackbacks p {
+        margin: 0;
+        }
+
+
+/* ------------------------------ 
+    Form Elements
+______________________________ */
+
+input[type=text], textarea {
+    width: 100%;
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px dotted #47436b;
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 21px;
+    color: #A8A2BB;
+    padding: 0;
+}
+
+textarea {
+    background-image: url('../img/form-bg2.png');    
+    border: 0;
+}
+
+input[type=text]:focus, textarea:focus {
+    background-color: transparent;
+}
+
+input[type=submit], button {
+    background-color: #3b3762;
+    border: 0;
+    border-radius: 5px;
+    color: rgba(236, 202, 255, .6);
+    cursor: pointer;
+    font-family: "Otama-ep", serif;
+    margin: 10px 0;
+    padding: 5px 20px;
+}

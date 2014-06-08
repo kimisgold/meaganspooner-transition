@@ -81,7 +81,7 @@ if ($numPingBacks != 0) : ?>
 <?php if (pings_open()) : ?> 
 <p id="respond"><span id="trackback-link"> 
     <a href="<?php trackback_url() ?>" rel="trackback">Get a Trackback link</a> 
-</span></p> 
+</span> - <span id="email-subcribe"><a href="http://feedburner.google.com/fb/a/mailverify?uri=MeaganSpooner&amp;loc=en_US">Subscribe to posts by email</a></span></p> 
 <?php endif; ?> 
 
 </div> 

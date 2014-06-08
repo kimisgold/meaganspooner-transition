@@ -24,8 +24,13 @@
             in <?php the_tags('', ', '); ?>
         <?php endif; ?>
         </p>
-    
-    <?php the_content(); ?>
+
+    <?php if (has_excerpt()): ?>
+        <?php the_excerpt(); ?>
+        <p><a href="<?php the_permalink(); ?>">(more&hellip;)</a></p>
+    <?php else: ?>
+        <?php the_content(); ?>
+    <?php endif; ?>
 
     </article>
     

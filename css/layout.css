@@ -77,6 +77,15 @@
         
         #address .line2 input[type=text] { width: 100%; margin-bottom: 1em; }
         
+    	.post-template-writespace-php h1 { font-size: 20px; }
+    	
+    	.post-template-writespace-php .name { font-size: 32px; }
+
+    	.post-template-writespace-php img.alignnone:first-child { 
+        	width: 100px;
+        	margin: -17% auto 10% auto;
+        }
+
         }
 	
 	/* Mobile Landscape/Browser */
